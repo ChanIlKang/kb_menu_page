@@ -15,8 +15,7 @@ const menuText = `폭찹스테이크
 야채샐러드
 건강흑미밥과 햅쌀밥
 배추김치와 각종반찬
-과일 토스트 커피
-재료 수급 상황에 따라 메뉴가 다소 변경될 수 있습니다 `;
+과일 토스트 커피`;
 
 const setMenu = document.querySelector('.kb_menu_txt');
 
