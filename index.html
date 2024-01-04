@@ -7,22 +7,36 @@
 </head>
 <body id="kb_body">
 <main class="kb_menu_wrapper">
-    <section class="kb_header">
+    <section class="kb_section">
         <img class="kb_logo" src="./imgs/logo_traced.png" alt="kb_logo"/>
-        <h1 class="kb_title">강남 밥상 점심 메뉴</h1>
-        <div class="kb_sub_box">
+        <p class="kb_billing_txt"></p>
+    </section>
+
+    <section class="kb_section">
+        <header class="kb_header">
+            <img class="kb_logo" src="./imgs/logo_traced.png" alt="kb_logo"/>
+            <h1 class="kb_title">강남 밥상 점심 메뉴</h1>
             <p class="kb_date"></p>
-        </div>
-    </section>
-
-    <section class="kb_menu_section">
+        </header>
         <p class="kb_menu_txt"></p>
-
-        <img class="kb_notice_img" src="imgs/Menu.png" alt="menu"/>
-        <p class="kb_notice">
-            재료 수급 상황에 따라 메뉴가 다소 변경될 수 있습니다
-        </p>
+        <p class="kb_notice">재료 수급 상황에 따라 메뉴가 다소 변경될 수 있습니다</p>
+        <p class="kb_notice_info"></p>
     </section>
+
+    <nav class="kb_nav_wrapper">
+        <div class="kb_nav_container" data-index="0">
+            <img src="imgs/Billing.png" alt="location icon"/>
+            <span class="kb_icon_txt">가격안내</span>
+        </div>
+        <div class="kb_nav_container" data-index="1">
+            <img src="imgs/Menu.png" alt="location icon"/>
+            <span class="kb_icon_txt">메뉴</span>
+        </div>
+        <div class="kb_nav_container" data-index="2">
+            <img src="imgs/icon_location.png" alt="location icon"/>
+            <span class="kb_icon_txt">오시는길</span>
+        </div>
+    </nav>
 </main>
 
 <script src="./js/index.js"></script>
