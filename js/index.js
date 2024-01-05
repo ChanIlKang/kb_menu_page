@@ -53,17 +53,26 @@ function checkScreen() {
 //kakao map
 const container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
 let options = { //지도를 생성할 때 필요한 기본 옵션
-    center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.
+    center: new kakao.maps.LatLng(523954.0, 1084098.0), //지도의 중심좌표.
     level: 3 //지도의 레벨(확대, 축소 정도)
 };
 
 let map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
-var markerPosition  = new kakao.maps.LatLng(33.450701, 126.570667);
+var markerPosition  = new kakao.maps.LatLng(523954.0, 1084098.0);
 
-// 마커를 생성합니다
+// 마우스 드래그와 모바일 터치를 이용한 지도 이동을 막는다
+map.setDraggable(false);
+
+// 지도에 마커를 생성하고 표시한다
 var marker = new kakao.maps.Marker({
-    position: markerPosition
+    position: new kakao.maps.LatLng(523954.0, 1084098.0), // 마커의 좌표
+    map: map // 마커를 표시할 지도 객체
 });
 
-// 마커가 지도 위에 표시되도록 설정합니다
-marker.setMap(map);
+// 마커 위에 표시할 인포윈도우를 생성한다
+var infowindow = new kakao.maps.InfoWindow({
+    content : '<div style="padding:5px; color: black; font-size: 0.7rem; text-align: center">강남식당 남부터미널역점</div>' // 인포윈도우에 표시할 내용
+});
+
+// 인포윈도우를 지도에 표시한다
+infowindow.open(map, marker);
