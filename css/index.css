@@ -37,6 +37,7 @@
     margin-bottom: 0;
     font-size: 3rem;
     font-weight: 600;
+    animation: slide-top .5s cubic-bezier(.25, .46, .45, .94) both;
 }
 
 .kb_date {
@@ -44,6 +45,7 @@
     margin-bottom: 0;
     font-size: 1rem;
     font-weight: 500;
+    animation: slide-top .5s cubic-bezier(.25, .46, .45, .94) both;
 }
 
 .kb_section {
@@ -56,6 +58,7 @@
     font-size: 2rem;
     font-weight: 600;
     line-height: 150%;
+    animation: slide-top .5s cubic-bezier(.25, .46, .45, .94) both;
 }
 
 .kb_notice_img {
@@ -68,6 +71,7 @@
     font-size: 2rem;
     font-weight: 400;
     line-height: 150%;
+    animation: slide-top .5s cubic-bezier(.25, .46, .45, .94) both;
 }
 
 .kb_nav_wrapper {
@@ -91,8 +95,43 @@
 .kb_nav_container > img {
     width: 3rem;
     margin-bottom: 0.5rem;
+    animation: slide-top .5s cubic-bezier(.25, .46, .45, .94) both;
 }
 
 .kb_icon_txt {
     font-size: 1rem;
+}
+
+.kb_billing_title {
+    margin: 2rem 0;
+    font-size: 3rem;
+    font-weight: 600;
+    animation: slide-top .5s cubic-bezier(.25, .46, .45, .94) both;
+}
+
+.kb_billing_txt {
+    font-size: 2rem;
+    animation: slide-top .5s cubic-bezier(.25, .46, .45, .94) both;
+}
+
+.map_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#map {
+    height: 30rem;
+    animation: slide-top .5s cubic-bezier(.25, .46, .45, .94) both;
+}
+
+@keyframes slide-top {
+    0% {
+        transform: translateY(-2rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
