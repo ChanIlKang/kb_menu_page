@@ -43,8 +43,8 @@
 .kb_date {
     margin-top: 1rem;
     margin-bottom: 0;
-    font-size: 1rem;
-    font-weight: 500;
+    font-size: 2rem;
+    font-weight: 400;
     animation: slide-top .5s cubic-bezier(.25, .46, .45, .94) both;
 }
 
@@ -55,8 +55,8 @@
 
 .kb_menu_txt {
     margin-bottom: 1rem;
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: 2.5rem;
+    font-weight: normal;
     line-height: 150%;
     animation: slide-top .5s cubic-bezier(.25, .46, .45, .94) both;
 }
@@ -68,7 +68,7 @@
 
 .kb_notice {
     margin-top: 0.5rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 400;
     line-height: 150%;
     animation: slide-top .5s cubic-bezier(.25, .46, .45, .94) both;
@@ -93,7 +93,7 @@
 }
 
 .kb_nav_container > img {
-    width: 3rem;
+    width: 4rem;
     margin-bottom: 0.5rem;
     animation: slide-top .5s cubic-bezier(.25, .46, .45, .94) both;
 }
@@ -103,15 +103,20 @@
 }
 
 .kb_billing_title {
-    margin: 2rem 0;
+    margin: 1rem 0;
     font-size: 3rem;
-    font-weight: 600;
+    font-weight: 500;
     animation: slide-top .5s cubic-bezier(.25, .46, .45, .94) both;
 }
 
 .kb_billing_txt {
-    font-size: 2rem;
+    margin: 1rem 0 0 0;
+    font-size: 2.5rem;
     animation: slide-top .5s cubic-bezier(.25, .46, .45, .94) both;
+}
+
+.mg1rem {
+    margin-top: 3rem;
 }
 
 .map_wrapper {
@@ -120,7 +125,8 @@
     align-items: center;
 }
 
-#map {
+#staticMap {
+    width: 100%;
     height: 30rem;
     animation: slide-top .5s cubic-bezier(.25, .46, .45, .94) both;
 }
@@ -133,5 +139,55 @@
     100% {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@media (min-width: 1000px) {
+    .kb_logo {
+        width: 3rem;
+    }
+
+    .kb_billing_title {
+        font-size: 1.5rem
+    }
+
+    .kb_billing_txt {
+        font-size: 1rem;
+    }
+
+    .kb_title {
+        font-size: 2rem;
+    }
+
+    .kb_date {
+        font-size: 1rem;
+    }
+
+    .kb_menu_txt {
+        font-size: 1.5rem;
+    }
+
+    .kb_notice {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+
+    .kb_billing_title {
+        font-size: 1.5rem;
+    }
+
+    .kb_section {
+        text-align: center;
+        margin: 2rem 0;
+        width: 60%;
+        padding-bottom: 10rem;
+    }
+
+    .kb_nav_container > img {
+        width: 3rem;
+    }
+
+    .kb_billing_txt {
+        font-size: 1.5rem;
     }
 }

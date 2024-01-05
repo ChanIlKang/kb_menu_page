@@ -28,9 +28,6 @@ dateElement.textContent = `${year}년 ${month}월 ${day}일`;
 //txt data
 setMenu.innerText = menuText;
 
-//functions
-checkScreen();
-showCurrentView();
 function showCurrentView() {
     nav.forEach(function (div) {
         div.addEventListener('click', function () {
@@ -48,31 +45,31 @@ function checkScreen() {
             screens[i].style.display = 'block';
         }
     }
+    staticMap.relayout();
 }
 
-//kakao map
-const container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스
-let options = { //지도를 생성할 때 필요한 기본 옵션
-    center: new kakao.maps.LatLng(523954.0, 1084098.0), //지도의 중심좌표.
-    level: 3 //지도의 레벨(확대, 축소 정도)
+//kakao map 37.48587450311861, 127.01609527609358
+
+// 이미지 지도에서 마커가 표시될 위치입니다
+var markerPosition = new kakao.maps.LatLng(37.48587450311861, 127.01609527609358);
+
+// 이미지 지도에 표시할 마커입니다
+// 이미지 지도에 표시할 마커는 Object 형태입니다
+var marker = {
+    position: markerPosition
 };
 
-let map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
-var markerPosition  = new kakao.maps.LatLng(523954.0, 1084098.0);
+var staticMapContainer = document.getElementById('staticMap'), // 이미지 지도를 표시할 div
+    staticMapOption = {
+        center: new kakao.maps.LatLng(37.48587450311861, 127.01609527609358), // 이미지 지도의 중심좌표
+        level: 1, // 이미지 지도의 확대 레벨
+        marker: marker // 이미지 지도에 표시할 마커
+    };
 
-// 마우스 드래그와 모바일 터치를 이용한 지도 이동을 막는다
-map.setDraggable(false);
+// 이미지 지도를 생성합니다
+var staticMap = new kakao.maps.Map(staticMapContainer, staticMapOption);
 
-// 지도에 마커를 생성하고 표시한다
-var marker = new kakao.maps.Marker({
-    position: new kakao.maps.LatLng(523954.0, 1084098.0), // 마커의 좌표
-    map: map // 마커를 표시할 지도 객체
-});
 
-// 마커 위에 표시할 인포윈도우를 생성한다
-var infowindow = new kakao.maps.InfoWindow({
-    content : '<div style="padding:5px; color: black; font-size: 0.7rem; text-align: center">강남식당 남부터미널역점</div>' // 인포윈도우에 표시할 내용
-});
-
-// 인포윈도우를 지도에 표시한다
-infowindow.open(map, marker);
+//functions
+checkScreen();
+showCurrentView();
