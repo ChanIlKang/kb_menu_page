@@ -11,12 +11,13 @@ const nav = document.querySelectorAll(".kb_nav_container");
 
 let currentView = 1;
 
-const menuText = `돼지불고기와 상추쌈
-순살돈까스
-웰빙카레
-햄감자볶음
-건새우아욱된장국
-시금치나물
+const menuText = `돼지김치두루치기
+떡갈비
+두부김치
+속풀이황태해장국
+감자고로케
+콩나물
+상추쌈
 야채샐러드 과일 토스트 커피
 건강흑미밥과 햅쌀밥
 배추김치와 각종반찬`;
