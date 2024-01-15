@@ -11,14 +11,14 @@ const nav = document.querySelectorAll(".kb_nav_container");
 
 let currentView = 1;
 
-const menuText = `춘장제육볶음
-유산슬덮밥
-잔치국수
-제철 톳두부무침
-연근조림
-무나물
-배추김치와 각종반찬
-건강흑미밥과 햅쌀밥 야채샐러드 과일 토스트 커피`;
+const menuText = `폭찹스테이크
+마파두부
+감자고로케
+속풀이황태해장국
+햄감자볶음
+오이무침
+야채샐러드 과일 토스트 건강흑미밥과 햅쌀밥
+배추김치와 각종반찬`;
 
 // 위치: 남부터미널역 1번출구/ 서초중앙로42 블루핀타워
 //time
