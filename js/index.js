@@ -11,14 +11,17 @@ const nav = document.querySelectorAll(".kb_nav_container");
 
 let currentView = 1;
 
-const menuText = `폭찹스테이크
-양송이토마토파스타
-쇠고기미역국
-감자고로케
-오징어젓 무침
-숙주나물
-오이피클
-야채샐러드 과일 토스트
+const menuText = `훈제오리볶음
+순살돈까스
+웰빙카레
+야채볶음밥
+제주유채나물
+제철 무생채
+간장깻잎장아찌
+시래기된장국
+야채샐러드
+과일 
+토스트
 건강흑미밥과 햅쌀밥
 배추김치와 각종반찬`;
 
