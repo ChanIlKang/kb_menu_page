@@ -11,13 +11,15 @@ const nav = document.querySelectorAll(".kb_nav_container");
 
 let currentView = 1;
 
-const menuText = `돼지김치두루치기
-두부김치
-감자고로케
-비엔나소세지볶음 콩나물무침
-브포콜리와 초장
-땅콩·검정콩자반
-속풀이황태해장국 야채샐러드 과일 토스트`;
+const menuText = `돼지불고기
+두부조림
+야채튀김
+참치김치찌개 오징어젓 무침
+숙주나물
+햄야채볶음밥과 흰쌀밥
+가지나물
+야채샐러드 과일 토스트
+배추김치와 각종반찬`;
 
 // 위치: 남부터미널역 1번출구/ 서초중앙로42 블루핀타워
 //time
